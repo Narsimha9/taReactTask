@@ -24,7 +24,7 @@ NOTE: User can select and deselect any filter, for example if user clicked on 20
 5. When we click on any combination like year, launch and land or any combination then it will redirect to /all route and displays data based on the combination that we selected.
 6. When user added unknown route to the path then it will redirect to page404 not found page.
 
-#How to run this task
+# How to run this task
 1. First clone this repo.
 2. Once clonned do npm i to install required node_modules.
 3. Once node_modules installed do run npm start, once it get compiled successfully then open http://localhost:3000/ in browser.
