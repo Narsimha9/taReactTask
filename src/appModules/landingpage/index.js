@@ -17,10 +17,31 @@ class LandingPage extends Component {
     }
 
     componentDidMount() {
-        const { activeIndex, successlaunchIndex, successlandIndex } = this.state;
-        if (activeIndex === null && successlandIndex === null && successlaunchIndex === null) {
+        const { pathname } = this.props.location;
+
+        if (pathname === '/yearwise') {
+            this.setState({ activeIndex: 0, year: '2006' }, () => {
+                this.handleMultipleFilters();
+            });
+        } else if (pathname === '/landwise') {
+            this.setState({ successlandIndex: 2, land: true }, () => {
+                this.handleMultipleFilters();
+            });
+        } else if (pathname === '/launchwise') {
+            this.setState({ successlaunchIndex: 0, launch: true }, () => {
+                this.handleMultipleFilters();
+            });
+        } else if (pathname === '/all') {
+            this.setState({
+                activeIndex: 0, successlandIndex: 2, successlaunchIndex: 0,
+                year: '2006', land: true, launch: true
+            }, () => {
+                this.handleMultipleFilters();
+            });
+        } else {
             this.props.getAll();
         }
+
     }
 
     handleMultipleFilters = () => {
