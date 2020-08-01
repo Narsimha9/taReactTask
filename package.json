@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0 --config ./webpack.config.js --mode development",
+    "start": "webpack-dev-server --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "execute": "webpack && node build/app.bundle.js",
     "webpack-dev-server": "webpack-dev-server",
@@ -38,6 +38,7 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.2",
+    "case-sensitive-paths-webpack-plugin": "^2.3.0",
     "html-webpack-plugin": "^4.3.0",
     "path": "^0.12.7",
     "webpack": "^4.43.0",
